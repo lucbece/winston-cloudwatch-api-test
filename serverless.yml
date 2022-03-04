@@ -5,12 +5,10 @@ provider:
   name: aws
   runtime: nodejs14.x
   region: 'us-east-2'
+  logRetentionInDays: 30
   environment:
     NODE_ENV: ${env:NODE_ENV}
     LOG_LEVEL: ${env:LOG_LEVEL}
-    CLOUDWATCH_ACCESS_KEY_ID: ${env:CLOUDWATCH_ACCESS_KEY_ID}
-    CLOUDWATCH_SECRET_ACCESS_KEY: ${env:CLOUDWATCH_SECRET_ACCESS_KEY}
-    CLOUDWATCH_GROUP_NAME: ${env:CLOUDWATCH_GROUP_NAME}
 
 functions:
   hello:
